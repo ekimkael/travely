@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_repeatable_passengers",
+  "info": {
+    "name": "Passenger",
+    "icon": "users"
+  },
+  "options": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "id_paper": {
+      "type": "enumeration",
+      "enum": [
+        "cni",
+        "passport",
+        "schoolcard",
+        "minor"
+      ],
+      "required": true,
+      "default": "cni"
+    },
+    "id_number": {
+      "type": "string"
+    }
+  }
+}

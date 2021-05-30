@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "Transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "OrangeMoney",
+        "MTNMoney"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "discount_code": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ticket": {
+      "via": "transaction",
+      "model": "ticket"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_non_repeatable_apps",
+  "info": {
+    "name": "apps",
+    "icon": "mobile"
+  },
+  "options": { "privateAttributes": ["id"] },
+  "attributes": {
+    "android": {
+      "type": "string"
+    },
+    "ios": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    }
+  }
+}

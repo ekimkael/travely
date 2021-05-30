@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "name": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "password",
+      "required": true,
+      "unique": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "validated"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "customer": {
+      "model": "customer",
+      "via": "tickets"
+    },
+    "passengers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "repeatable.passenger"
+    },
+    "transaction": {
+      "model": "transaction",
+      "via": "ticket"
+    },
+    "travel": {
+      "model": "travel",
+      "via": "tickets"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agencies",
+  "info": {
+    "name": "Agency",
+    "description": ""
+  },
+  "options": {
+    "privateAttributes": [
+      "travels",
+      "published_at",
+      "created_at",
+      "updated_at"
+    ],
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phones": {
+      "type": "component",
+      "repeatable": true,
+      "component": "repeatable.phone"
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "non-repeatable.socials"
+    },
+    "apps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "non-repeatable.apps"
+    },
+    "branches": {
+      "via": "agency",
+      "collection": "branche"
+    },
+    "travels": {
+      "via": "agency",
+      "collection": "travel"
+    }
+  }
+}

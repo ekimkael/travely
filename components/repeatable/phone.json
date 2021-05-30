@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_repeatable_phones",
+  "info": {
+    "name": "phone",
+    "icon": "phone-alt",
+    "description": ""
+  },
+  "options": {
+    "privateAttributes": ["id"]
+  },
+  "attributes": {
+    "number": {
+      "type": "string",
+      "regex": "^[0-9]*$",
+      "required": true,
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "travels",
+  "info": {
+    "name": "Travel",
+    "description": ""
+  },
+  "options": {
+    "privateAttributes": [
+      "token",
+      "sales_deadline",
+      "published_at",
+      "created_at",
+      "updated_at"
+    ],
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "standing": {
+      "type": "enumeration",
+      "enum": [
+        "Classic",
+        "VIP"
+      ],
+      "default": "Classic",
+      "required": true
+    },
+    "departure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "non-repeatable.time-location"
+    },
+    "arrival": {
+      "type": "component",
+      "repeatable": false,
+      "component": "non-repeatable.time-location"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "repeatable.service"
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "non-repeatable.price"
+    },
+    "available_seats": {
+      "type": "integer",
+      "required": true
+    },
+    "agency": {
+      "model": "agency",
+      "via": "travels"
+    },
+    "tickets": {
+      "via": "travel",
+      "collection": "ticket"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_non_repeatable_time_locations",
+  "info": {
+    "name": "time-location",
+    "icon": "map-marker"
+  },
+  "options": { "privateAttributes": ["id"] },
+  "attributes": {
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

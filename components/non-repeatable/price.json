@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_non_repeatable_prices",
+  "info": {
+    "name": "pricing",
+    "icon": "money-check-alt",
+    "description": ""
+  },
+  "options": { "privateAttributes": ["id"] },
+  "attributes": {
+    "seat": {
+      "type": "decimal",
+      "required": true
+    },
+    "fees": {
+      "type": "decimal",
+      "required": true
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": ["XAF", "XOF", "USD", "EUR", "AUD"],
+      "required": true,
+      "default": "XAF"
+    }
+  }
+}

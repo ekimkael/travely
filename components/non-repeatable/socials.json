@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_non_repeatable_socials",
+  "info": {
+    "name": "socials",
+    "icon": "at"
+  },
+  "options": { "privateAttributes": ["id"] },
+  "attributes": {
+    "twitter": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    }
+  }
+}
